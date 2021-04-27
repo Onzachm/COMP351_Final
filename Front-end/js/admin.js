@@ -28,6 +28,14 @@ function getFill(callback) {
             document.getElementById("getCount").innerHTML = g[0]["count(*)"];
             callback(postFill);
         }
+
+        else if (this.status = 404){
+            console.log("404 NOT FOUND")
+        }
+
+        else if (this.status = 500){
+            console.log("500 INTERNAL SERVER ERROR")
+        }
     };
 }
 
@@ -42,6 +50,14 @@ function deleteFill(callback) {
             document.getElementById("delCount").innerHTML = delNum[0]["count(*)"];
             callback(putFill);
         }
+
+        else if (this.status = 404){
+            console.log("404 NOT FOUND")
+        }
+
+        else if (this.status = 500){
+            console.log("500 INTERNAL SERVER ERROR")
+        }
     };
 }
 
@@ -53,6 +69,14 @@ function putFill() {
         if (this.readyState == 4 && this.status == 200) {
             let putNum = JSON.parse(this.responseText);
             document.getElementById("putCount").innerHTML = putNum[0]["count(*)"];
+        }
+
+        else if (this.status = 404){
+            console.log("404 NOT FOUND")
+        }
+
+        else if (this.status = 500){
+            console.log("500 INTERNAL SERVER ERROR")
         }
     };
 }
@@ -177,6 +201,14 @@ function put() {
 
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
+        }
+
+        else if (this.status = 404){
+            console.log("404 NOT FOUND")
+        }
+
+        else if (this.status = 500){
+            console.log("500 INTERNAL SERVER ERROR")
         }
     };
 }
