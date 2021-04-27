@@ -91,6 +91,10 @@ function postFill(callback) {
             document.getElementById("postCount").innerHTML = postNum[0]["count(*)"];
             callback();
         }
+
+        else if (this.status = 500){
+            console.log("500 INTERNAL SERVER ERROR")
+        }
     };
 }
 
