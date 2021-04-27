@@ -92,6 +92,10 @@ function postFill(callback) {
             callback();
         }
 
+        else if (this.status = 404){
+            console.log("404 NOT FOUND")
+        }
+
         else if (this.status = 500){
             console.log("500 INTERNAL SERVER ERROR")
         }
@@ -189,6 +193,14 @@ function post() {
 
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
+        }
+        
+        else if (this.status = 404){
+            console.log("404 NOT FOUND")
+        }
+
+        else if (this.status = 500){
+            console.log("500 INTERNAL SERVER ERROR")
         }
     };
 }
