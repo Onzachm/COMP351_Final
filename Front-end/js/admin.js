@@ -11,7 +11,6 @@ function fill(callback) {
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             storage = JSON.parse(this.responseText);
-            console.log(JSON.parse(this.responseText));
             loopAnd();
             callback(deleteFill);
         }
@@ -46,7 +45,6 @@ function deleteFill(callback) {
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             let delNum = JSON.parse(this.responseText);
-            console.log(this.responseText);
             document.getElementById("delCount").innerHTML = delNum[0]["count(*)"];
             callback(putFill);
         }
